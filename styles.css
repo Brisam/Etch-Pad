@@ -1,0 +1,12 @@
+#container{
+  height: 160px;
+  width: 160px;
+  border: 2px solid black;
+}
+
+.block{
+  height: 10px;
+  width: 10px;
+  border: 1px solid black;
+  display: inline-block;
+}
