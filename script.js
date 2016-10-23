@@ -8,5 +8,7 @@ $(document).ready(function(){
     }
   }
 
-
+  $(".square").hover(function(){
+    $(this).addClass("change");
+  })
 });
