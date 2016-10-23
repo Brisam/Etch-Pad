@@ -1,18 +1,39 @@
 $(document).ready(function(){
 
   for(var x = 0; x < 16; x++){
-    $('#container').append("<div class = 'row'></div>");//16 rows in container
+    $('#container').append('<div class="row"></div>');
 
     for(var y = 0; y < 16; y++){
-      $('#container').append("<div class = 'square'></div>");//16 squares, per row
+      $('#container').append('<div class="square"></div>');
     }
-  }
+  };
 
-  $(".square").hover(function(){
+  //hover effect
+  $('.square').hover(function(){
     $(this).addClass("change");
-  })
+  });
 
-  $("button").click(function(){
-    $(".square").removeClass("change");
-  })
+  //button functionality
+    //button clears board
+  $('#clear').click(function(){
+    $('.square').removeClass('change');
+    });
+
+  $('#new').click(function(){
+    var num = prompt("How many squares?");
+
+    $('#container').empty();
+
+    for(var x = 0; x < num; x++){
+      $('#container').append('<div class="row"></div>');
+
+      for(var y = 0; y < num; y++){
+        $('#container').append('<div class="square"></div>');
+      }
+    }
+
+    $('.square').hover(function(){
+      $(this).addClass("change");
+    });
+  });
 });
